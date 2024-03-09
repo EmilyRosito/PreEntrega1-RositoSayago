@@ -1,5 +1,6 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importar estilos de Bootstrap
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const CardWidget = () => {
   const cartItemCount = 5; // Número hardcodeado para la cantidad de elementos en el carrito
@@ -7,11 +8,8 @@ const CardWidget = () => {
   return (
     <div className="card" style={{ width: '10rem' }}>
       <div className="card-body">
-      <i class="bi bi-cart"></i> {/* Icono de carrito usando Bootstrap Icons */}
-        <span className="badge bg-secondary">{cartItemCount}</span> {/* Notificación con el número de elementos */}
-      </div>
-      <div>
-        
+        <FontAwesomeIcon icon={faShoppingCart} />
+        <span className="badge bg-secondary">{cartItemCount}</span> 
       </div>
     </div>
   );
